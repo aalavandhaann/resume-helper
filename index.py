@@ -32,7 +32,7 @@ def getAStrongResume(jd: str, resume_file_path: pathlib.Path)->pathlib.Path:
         doc_pages = list(doc.pages())
         x, y, width, height = doc_pages[0].bound()
         
-        page = doc.new_page()
+        page = doc_pages[-1]#doc.new_page()
         page.insert_text((0, 0), customized_message, fontsize=1, color=fitz.utils.getColor('white'))       
         
         new_file_path.parent.mkdir(exist_ok=True, parents=True)
