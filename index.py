@@ -11,7 +11,7 @@ BASE_PATH: pathlib.Path = pathlib.Path(__file__).parent
 ALLOWED_EXTENSIONS: dict = {'doc', 'docx', 'pdf'}
 
 
-app = Flask(__name__)
+resume_helper_app = Flask(__name__)
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -54,7 +54,7 @@ def docToPDF(docXPath: pathlib.Path, savePDFPath: pathlib.Path)->bool:
     return savePDFPath.exists()  
 
 
-@app.route('/', methods=['GET', 'POST'])
+@resume_helper_app.route('/', methods=['GET', 'POST'])
 def index():
     messages = request.args.get('messages') or json.dumps({"hasError": False})
     messages = json.loads(messages)
@@ -64,7 +64,7 @@ def index():
     
     return render_template('index_template.html', errors = errors), 200
 
-@app.route('/modifiedresume', methods=['GET', 'POST'])
+@resume_helper_app.route('/modifiedresume', methods=['GET', 'POST'])
 def hiringPersonShouldNotSlackAnymore():
     job_description: str = request.form.get('job-description')
     resume_file = request.files.get('resume-file')
@@ -103,4 +103,4 @@ def hiringPersonShouldNotSlackAnymore():
 
     
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    resume_helper_app.run(host='0.0.0.0', port=5000, debug=True)
