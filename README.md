@@ -1,0 +1,14 @@
+# What is this project about? 
+
+Nowadays, resumes are being filtered using AI before a sentient and a sensible human being looks at it. While, this saves a lot of time for the hiring person but it does make a lot of skilled people miss opportunities. Whilst, the statement is also true that good companies can miss potential workers as well. 
+
+Personally, I had applied to around 85 jobs and did not get even a single call to inquire about my profile. Let alone a call for an interview. Maybe I am not qualified, I am dumb and good for nothing. But what surprised me was that countless voices including those I knew personally and who were quite intellegent and capable were also reporting the same thing. So the issue was not personal rather there is someone without a sentience and sensibility filtering our resumes/cv before handing it out to the hiring agent. We are developers, personally, I work with AI and computer vision, hence I might have a decent idea about their caveats. So this project is a tiny flask based webservice, where you can upload your resume and get back a different resume that should ensure you are getting the calls by getting past those AI agents. 
+
+# How does it work?
+
+Just  upload your resume and ensure to copy and paste the entire job description into the job description textarea. Then submit to get a resume that looks like nothing has changed. Except you have one additional blank page where all the text from the job description embedded. Now the AI cannot miss your resume. Or I hope so. Goodluck to all of us. I hope this project dies soon, which would mean we no longer need this cheat. Either the AI system improves or hiring people develop some sense. 
+
+
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@camipetyn/video/7361868516028435755" data-video-id="7361868516028435755" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@camipetyn" href="https://www.tiktok.com/@camipetyn?refer=embed">@camipetyn</a> wanted to share this hack again bc it helped me SO much shoutout @Daym for teaching me it!!<a title="recessioncore" target="_blank" href="https://www.tiktok.com/tag/recessioncore?refer=embed">#recessioncore</a> <a title="jobapplytricks" target="_blank" href="https://www.tiktok.com/tag/jobapplytricks?refer=embed">#jobapplytricks</a> <a title="jobinterview" target="_blank" href="https://www.tiktok.com/tag/jobinterview?refer=embed">#jobinterview</a> <a title="applyingforjobs" target="_blank" href="https://www.tiktok.com/tag/applyingforjobs?refer=embed">#applyingforjobs</a> <a target="_blank" title="♬ original sound - Cami Petyn" href="https://www.tiktok.com/music/original-sound-7361868688619801386?refer=embed">♬ original sound - Cami Petyn</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+
+## Chao !!!!
