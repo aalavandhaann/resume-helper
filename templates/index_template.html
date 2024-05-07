@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goodluck</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body class="p-3 m-0 border-0 bd-example m-0 border-0">
+    <h1 class="max-w-30 w-20">Wish you goodluck with your Job Application</h1>
+    <div class="flex flex-row w-100">
+        <div class="w-25">
+            <form action="/modifiedresume" method="POST" enctype="multipart/form-data" class="form-inline" role="form">
+                <div class="mb-3">
+                    <label for="resumeFile" class="form-label">Resume</label>
+                    <input type="file" class="form-control" aria-describedby="resume file" name="resume-file"
+                        placeholder="Resume File" accept=".doc, .docx, application/msword, application/pdf"
+                        required = "required"
+                        id="resumeFile" />
+                </div>
+                <div class="mb-3">
+                    <label for="jobDescription" class="form-label">Job Description</label>
+                    <textarea type="textarea" name="job-description" class="form-control" aria-describedby="jobDescription"
+                        placeholder="Copy and Paste the job description(JD) here" 
+                        required = "required"
+                        id="jobDescription"></textarea>
+                </div>
+                {% if errors.get('errorMessage') %}
+                    <div class="alert alert-danger" role="alert">
+                        {{errors.get('errorMessage')}}
+                    </div>                 
+                {% endif %}
+                <button type="submit"            
+                class="btn btn-primary my-3" id="tigerReady">I want that Job!</button>
+                <label for="tigerReady" class="form-label">Go get them tiger</label>
+            </form>
+        </div>
+        <div class="w-25">
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@camipetyn/video/7361868516028435755" data-video-id="7361868516028435755" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@camipetyn" href="https://www.tiktok.com/@camipetyn?refer=embed">@camipetyn</a> wanted to share this hack again bc it helped me SO much shoutout @Daym for teaching me it!!<a title="recessioncore" target="_blank" href="https://www.tiktok.com/tag/recessioncore?refer=embed">#recessioncore</a> <a title="jobapplytricks" target="_blank" href="https://www.tiktok.com/tag/jobapplytricks?refer=embed">#jobapplytricks</a> <a title="jobinterview" target="_blank" href="https://www.tiktok.com/tag/jobinterview?refer=embed">#jobinterview</a> <a title="applyingforjobs" target="_blank" href="https://www.tiktok.com/tag/applyingforjobs?refer=embed">#applyingforjobs</a> <a target="_blank" title="♬ original sound - Cami Petyn" href="https://www.tiktok.com/music/original-sound-7361868688619801386?refer=embed">♬ original sound - Cami Petyn</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

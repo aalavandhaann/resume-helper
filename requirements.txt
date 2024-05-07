@@ -1,0 +1,16 @@
+blinker==1.8.2
+chardet==5.2.0
+click==8.1.7
+Flask==3.0.3
+Flask-Cors==4.0.1
+itsdangerous==2.2.0
+Jinja2==3.1.4
+lxml==5.2.1
+MarkupSafe==2.1.5
+pillow==10.3.0
+plum-dispatch==1.7.4
+PyMuPDF==1.24.2
+PyMuPDFb==1.24.1
+tqdm==4.66.4
+typing_extensions==4.11.0
+Werkzeug==3.0.3
