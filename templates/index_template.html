@@ -16,7 +16,7 @@
 <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     <h1 class="max-w-30 w-20">Wish you goodluck with your Job Application</h1>
     <div class="flex flex-row w-100">
-        <div class="w-25">
+        <div class="w-50">
             <form action="/modifiedresume" method="POST" enctype="multipart/form-data" class="form-inline" role="form">
                 <div class="mb-3">
                     <label for="resumeFile" class="form-label">Resume</label>
@@ -32,6 +32,15 @@
                         required = "required"
                         id="jobDescription"></textarea>
                 </div>
+                <div class="mb-3">
+                    <p class="text-warning">This section is important. The job description will be positioned at the top left corner of 
+                        the last page. Hence it is absolutely necessary you choose the color to match with the 
+                        background color of your resume. Use the color picker to pick the color of your background and 
+                        it will take care of the rest. If you still do not understand then never mind do the conversion 
+                        and check the last page. If you do not see anything weird then you have nothing to worry. </p>
+                    <label>Background color: </label>
+                    <input type="color" name="background-color" class="form-control form-control-color" id="backgroundColor" value="#FFFFFF" title="Choose a color">
+                </div>
                 {% if errors.get('errorMessage') %}
                     <div class="alert alert-danger" role="alert">
                         {{errors.get('errorMessage')}}
@@ -46,6 +55,7 @@
             <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@camipetyn/video/7361868516028435755" data-video-id="7361868516028435755" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@camipetyn" href="https://www.tiktok.com/@camipetyn?refer=embed">@camipetyn</a> wanted to share this hack again bc it helped me SO much shoutout @Daym for teaching me it!!<a title="recessioncore" target="_blank" href="https://www.tiktok.com/tag/recessioncore?refer=embed">#recessioncore</a> <a title="jobapplytricks" target="_blank" href="https://www.tiktok.com/tag/jobapplytricks?refer=embed">#jobapplytricks</a> <a title="jobinterview" target="_blank" href="https://www.tiktok.com/tag/jobinterview?refer=embed">#jobinterview</a> <a title="applyingforjobs" target="_blank" href="https://www.tiktok.com/tag/applyingforjobs?refer=embed">#applyingforjobs</a> <a target="_blank" title="♬ original sound - Cami Petyn" href="https://www.tiktok.com/music/original-sound-7361868688619801386?refer=embed">♬ original sound - Cami Petyn</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
         </div>
     </div>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 

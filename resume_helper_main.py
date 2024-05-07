@@ -17,7 +17,7 @@ def allowed_file(filename):
     return '.' in filename and \
         filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
         
-def getAStrongResume(jd: str, resume_file_path: pathlib.Path)->pathlib.Path:
+def getAStrongResume(jd: str, resume_file_path: pathlib.Path, text_color: tuple=(255, 255, 255))->pathlib.Path:
     new_file_path: pathlib.Path = BASE_PATH.joinpath('files').joinpath('downloads').joinpath(f'UPDATED-{resume_file_path.stem}.pdf')
     customized_message: str = ''    
         
@@ -33,7 +33,8 @@ def getAStrongResume(jd: str, resume_file_path: pathlib.Path)->pathlib.Path:
         x, y, width, height = doc_pages[0].bound()
         
         page = doc_pages[-1]#doc.new_page()
-        page.insert_text((0, 0), customized_message, fontsize=1, color=fitz.utils.getColor('white'))       
+        page.insert_text((0, 0), customized_message, fontsize=1, color=(text_color[0]/ 255, text_color[1]/255, text_color[2]/255))       
+        # page.insert_text((0, 0), customized_message, fontsize=1, color=fitz.utils.)       
         
         new_file_path.parent.mkdir(exist_ok=True, parents=True)
         doc.save(f'{new_file_path}')
@@ -66,6 +67,10 @@ def index():
 
 @resume_helper_app.route('/modifiedresume', methods=['GET', 'POST'])
 def hiringPersonShouldNotSlackAnymore():
+    rgb_color_str = (request.form.get('background-color') or '#FF0000').lstrip('#')
+    rgb = tuple(int(rgb_color_str[i:i+2], 16) for i in (0, 2, 4))
+    print('RGB =', rgb)
+    
     job_description: str = request.form.get('job-description')
     resume_file = request.files.get('resume-file')
     messages = {'hasErrors': False, "errorMessage": ""}
@@ -94,7 +99,7 @@ def hiringPersonShouldNotSlackAnymore():
     else:
         resume_file.save(upload_file_path)
         
-    modified_file_path = getAStrongResume(job_description, upload_file_path)
+    modified_file_path = getAStrongResume(job_description, upload_file_path, text_color=rgb)
     if(modified_file_path):
         return send_file(f'{modified_file_path.resolve()}', download_name=f'{modified_file_path.name}', as_attachment=True)       
     
